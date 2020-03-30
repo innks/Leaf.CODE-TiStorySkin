@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<title>Digital Time</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./images/font.css">
+<style type="text/css">
+
+@font-face {
+    font-family: 'AritaDotum';
+    font-style: normal;
+    font-weight: 400;
+    src: local('※'),
+        url('./images/Arita4.0_M.woff') format('woff');
+}
+@font-face {
+  font-family: 'clockicons';
+  src: url('./images/clockicons.woff2?61827113') format('woff2'),
+       url('./images/clockicons.woff?61827113') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}	
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;	
+}
+
+.clockAtea {top: 50%;left:calc((100vw / 2) - 350px);transform: translate(-50%, -50%);
+    width: max-content;max-width: 100%;box-sizing: border-box;position: absolute !important;}
+#clock {width: 700px;}
+.ampm {color: #fff;font-size: 5vh; font-family: 'AritaDotum', sans-serif;}
+.time {color: #fff;font-size: 30vh; line-height: 1; font-family: clockicons,sans-serif;}
+.date {color: #fff;font-size: 5vh; margin: 0 auto; text-align: center; padding-top: 32px; font-family: 'AritaDotum', sans-serif;}
+.icon {display: inline-block;margin-left: 5px;font-size: 23px;line-height: 28px;vertical-align: middle;cursor: pointer;}
+
+[class*=" ci-"], [class^=ci-] {font-family: clockicons!important; speak: none; font-style: normal; font-weight: 400; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+.ci-expand1:before {content: "\e657";}
+.ci-collapse:before {content: "\e904";}
+
+#element {color: #fff; margin: 20px 30px 0 0;text-align: right;}
+.clearfix::after {display: block; clear: both; content: "";
+}
+
+/* Media Screen - Mobie */
+@media screen and (max-width:767px) {
+
+.clockAtea {text-align: center; position: static;}
+#clock {width: 250px;}
+.time {font-size: 65px;}
+.date {font-size: 22px;padding-top: 16px;}
+.ampm {font-size: 28px;}
+}
+</style>
+</head>
+
+<body onload="printClock()">
+	<div id="element">
+		<a id="go-button"><i class="icon ci-expand1"></i></a>
+	</div>
+	<div class="clockAtea">		
+		<div id="clock"></div>
+	</div>
+</body>
+
+<script>
+/* Get into full screen */
+function GoInFullscreen(element) {
+	if(element.requestFullscreen)
+		element.requestFullscreen();
+	else if(element.mozRequestFullScreen)
+		element.mozRequestFullScreen();
+	else if(element.webkitRequestFullscreen)
+		element.webkitRequestFullscreen();
+	else if(element.msRequestFullscreen)
+		element.msRequestFullscreen();
+}
+
+/* Get out of full screen */
+function GoOutFullscreen() {
+	if(document.exitFullscreen)
+		document.exitFullscreen();
+	else if(document.mozCancelFullScreen)
+		document.mozCancelFullScreen();
+	else if(document.webkitExitFullscreen)
+		document.webkitExitFullscreen();
+	else if(document.msExitFullscreen)
+		document.msExitFullscreen();
+}
+
+/* Is currently in full screen or not */
+function IsFullScreenCurrently() {
+	var full_screen_element = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement || null;
+	
+	// If no element is in full-screen
+	if(full_screen_element === null)
+		return false;
+	else
+		return true;
+}
+
+$("#go-button").on('click', function() {
+	if(IsFullScreenCurrently())
+		GoOutFullscreen();
+	else
+		GoInFullscreen($("body").get(0));
+});
+
+$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
+	if(IsFullScreenCurrently()) {
+		$("#go-button").html('<i class="icon ci-collapse"></i>');
+	}
+	else {
+		$("#go-button").html('<i class="icon ci-expand1"></i>');
+	}
+});
+
+
+function printClock() {
+    
+    var clock = document.getElementById("clock");            // 출력할 장소 선택
+    var currentDate = new Date();                                     // 현재시간
+    var calendar = currentDate.getFullYear() + "년 " + (currentDate.getMonth()+1) + "월 " + currentDate.getDate() + "일 " + getTodayLabel() + "요일";// 현재 날짜 요일
+    var amPm = '오전'; // 초기값 오전
+    var currentHours = Zari(currentDate.getHours(),2); 
+    var currentMinute = Zari(currentDate.getMinutes() ,2);
+    var currentSeconds =  Zari(currentDate.getSeconds(),2);
+    
+    if(currentHours >= 12){ // 시간이 12보다 클 때 오후 로 세팅, 12를 빼줌 -- 24시 없음
+    	amPm = '오후';
+    	currentHours = Zari(currentHours - 12,2);
+    }
+    clock.innerHTML = "<div class='clearfix'><p class='ampm'>" + amPm + "</p><p class='time'>"+currentHours+":"+currentMinute+":"+currentSeconds +"</p><p class='date'>" + calendar + "</p></div>"; //날짜를 출력해 줌
+    
+    setTimeout("printClock()",1000);         // 1초마다 printClock() 함수 호출
+}
+
+function getTodayLabel() {
+    
+    var week = new Array('일', '월', '화', '수', '목', '금', '토');
+    
+    var today = new Date().getDay();
+    var todayLabel = week[today];
+    
+    return todayLabel;
+}
+
+function Zari(num, digit) { // 자릿수 맞춰주기
+	  var zero = '';
+	  num = num.toString();
+	  if (num.length < digit) {
+	    for (i = 0; i < digit - num.length; i++) {
+	      zero += '0';
+	    }
+	  }
+	  return zero + num;
+}
+
+</script>
+</html>
