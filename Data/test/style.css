@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 :root{
-	--body-bg-color: #f8f9fa;
+	--body-bg-color: #f3f5f7;
 	--link-color: #624AEF;
 	--link-hover-color: #424A71;
 	--text-color: #4d5058;
@@ -60,6 +60,29 @@ ul:not(.ul) > li {
   list-style-type: none;
 }
 
+em{color:#4C44D1;}
+mark,.mark,ins {background-color: #4C44D1}
+cite{color: #6c757d;}
+:not(pre) > code, 
+:not(pre) > kbd, 
+:not(pre) > samp {
+    font-size: 87.5%;
+    color: #DE3E95;
+    word-wrap: break-word;
+}
+pre code {font-size: inherit;color: inherit;word-break: normal;}
+blockquote {margin-bottom: 1rem; font-size: 1.25rem;}
+blockquote footer {display: block;font-size: 80%;color: #6c757d;font-style: normal;}
+blockquote footer::before {
+    content: "\2014\00A0";
+}
+
+/* 로딩 화면 */
+.loaded #loader{opacity:0;transition-duration:.5s}
+#loader{z-index:9999;position:fixed;top:0;width:100%;height:100%;background-color:var(--content-bg-color)}
+#loader .la-line-scale{color:var(--link-color)}
+.__ak-loading__{top:50%;left:50%;transform:translate(-50%,-50%);width:max-content;max-width:100%;box-sizing:border-box;position:absolute !important}
+
 #__ak-ti__ {
   margin: 0;
   padding: 0;
@@ -74,4 +97,84 @@ ul:not(.ul) > li {
   padding: 0;
   display: flex;
   flex-direction: column;
+}
+header#__header__ {
+	display: flex;
+	flex: none;
+	width: 100%;
+	height: 60px;
+	background-color: #2e2e2e;
+	flex-direction: row;
+	box-shadow:0 1px 4px 0 rgba(0,0,0,0.2);
+}
+
+section {
+	display: flex;
+	flex: 1;
+	height: 100%;
+}
+footer {
+	display: flex;
+	flex: none;
+	position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 29px;
+  border-top: 1px solid #b5b5b5;
+  background: #fff;
+}
+#bloglogo {
+  margin: 0;
+  display: block;
+  padding: 0;
+  width: 300px;
+}
+#bloglogo a {
+	color:#fff;
+	font-size: 26px;
+	font-weight: 700;
+	font-family: 'Baloo Thambi 2', cursive;
+	padding: 0;
+	padding-left: 18px;
+  cursor: pointer;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  text-decoration: none;
+  -webkit-box-align: center;
+}
+#bloglogo span {
+	color:#00bc87;
+}
+#bloglogo a:hover {
+	color:#fff;	
+	opacity:0.8;
+	text-decoration: none;
+}
+#footer .quick_link {
+	-webkit-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  padding: 7px 0 0 18px;
+  background: #fff;
+  font-size: 11px;
+  line-height: 14px;
+  color: #8a8a8a;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+#footer .quick_link a {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: -1px;
+  color: #8a8a8a;
+}
+#footer .quick_link a:hover {
+	color: #8a8a8a;
+}
+#footer .bar {
+  display: inline-block;
+  margin: 0 5px 0 3px;
+  color: #dadada;
 }
