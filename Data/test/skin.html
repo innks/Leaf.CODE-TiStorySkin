@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko" style="-webkit-touch-callout: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+<html lang="ko">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -7,10 +7,12 @@
 	<meta name="author" content="[##_blogger_##]">
 	<title>[##_title_##] 소개 blog</title>
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/load-awesome@1.1.0/css/line-scale.min.css"><!-- loading css -->
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css"><!-- highlight.js -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./images/out.min.css?b=1">
 	<link rel="stylesheet" type="text/css" href="./images/font.css">
-	<link rel="stylesheet" type="text/css" href="./images/iconfont.min.css?b=2">	
+	<link rel="stylesheet" type="text/css" href="./images/iconfont.min.css?b=112">	
 	<link rel="stylesheet" href="./style.css">
 	<!-- 사용자 스크립트 DATA 영역 --> <!-- // 사용자 스크립트 DATA 영역 -->
 </head>
@@ -24,25 +26,602 @@
 	<div id="__ak-ti__">
 		<div id="__tistory__">
 			<header id="__header__">
-				<div id="bloglogo">
-					<a href="[##_blog_link_##]"><span>Leaf</span>CODE</a>
+				<div class="header-inner">
+					<div class="header-column"><!-- header-column { -->
+						<div role="button" tabindex="-1" class="mobileButton">
+	            <svg preserveaspectratio="xMidYMid meet" height="1em" width="1em" fill="none" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" class="icon-text-icon"><g><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></g></svg>
+	          </div>	
+						<div id="bloglogo">
+							<a href="[##_blog_link_##]"><span>Leaf</span>CODE</a>
+						</div>
+					</div><!-- } header-column -->
+
+					<div class="header-wrapp">
+	        	[##_blog_menu_##]
+	        </div> 
+
+				<div class="header-search">
+				  <s_search>
+						<label class="search-box">
+			        <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }" />
+			        <button value="검색" type="button" onclick="[##_search_onclick_submit_##]" class="header-submit"></button>			      
+						</label>
+					</s_search>
 				</div>
-				
+
+				</div>
 			</header>
-			<section>
-				
-			</section>
+			<main class="main">
+				<div class="main-inner">
+					<div class="main-left">
+						<nav id="left-nav">
+							<s_sidebar>
+							<s_sidebar_element>
+							<ul class="main-ul">
+								<li>
+								<!-- 카테고리 -->
+								[##_category_list_##]
+								</li>
+							</ul>
+							</s_sidebar_element>
+							<s_sidebar_element>
+							<ul class="htmlTag">
+								<!-- HTML -->
+								<li><a href="[##_blog_link_##]1" class="navBtn navItem" target="_top">HTML 태그 레퍼런스</a></li>
+								<li><p class="navItem la">HTML 요소</p></li>
+								<li><p class="navLabel">HTML 요소 리스트</p></li>
+								<li><a href="#" class="navBtn">&lt;!--...--&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;!DOCTYPE&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;a&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;abbr&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;acronym&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;address&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;applet&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;area&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;area&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;aside&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;audio&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;b&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;base&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;basefont&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;bdi&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;bdo&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;big&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;blockquote&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;body&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;br&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;button&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;canvas&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;caption&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;center&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;cite&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;code&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;col&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;colgroup&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;data&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;data&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;dd&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;del&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;details&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;dfn&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;dialog&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;dialog&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;div&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;dl&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;dt&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;em&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;embed&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;fieldset&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;figcaption&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;figure&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;font&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;footer&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;form&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;frame&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;frameset&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;h1&gt; ~ &lt;h6&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;head&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;header&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;hr&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;html&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;i&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;iframe&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;img&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;input&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;ins&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;kbd&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;label&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;legend&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;li&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;link&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;main&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;map&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;mark&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;meta&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;meter&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;nav&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;noframes&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;noscript&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;object&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;ol&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;optgroup&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;option&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;output&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;p&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;param&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;picture&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;pre&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;progress&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;q&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;rp&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;rt&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;ruby&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;s&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;samp&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;script&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;section&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;select&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;small&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;source&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;span&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;strike&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;strong&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;style&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;sub&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;summary&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;sup&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;svg&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;table&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;tbody&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;td&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;template&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;textarea&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;tfoot&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;th&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;thead&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;time&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;title&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;tr&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;track&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;tt&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;u&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;ul&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;var&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;video&gt;</a></li>
+								<li><a href="#" class="navBtn">&lt;wbr&gt;</a></li>
+							</ul>
+							</s_sidebar_element>
+							<s_sidebar_element>
+							<ul class="cssTag">
+								<!-- CSS -->
+								<li><p class="navItem la">CSS 참조</p></li>
+								<li><p class="navLabel las">CSS 속성 리스트</p></li>
+								<li><p class="navLabel">A</p></li>
+								<li><a href="#" class="navBtn">align-content</a></li>
+								<li><a href="#" class="navBtn">align-items</a></li>
+								<li><a href="#" class="navBtn">align-self</a></li>
+								<li><a href="#" class="navBtn">all</a></li>
+								<li><a href="#" class="navBtn">animation</a></li>
+								<li><a href="#" class="navBtn">animation-delay</a></li>
+								<li><a href="#" class="navBtn">animation-direction</a></li>
+								<li><a href="#" class="navBtn">animation-duration</a></li>
+								<li><a href="#" class="navBtn">animation-fill-mode</a></li>
+								<li><a href="#" class="navBtn">animation-iteration-count</a></li>
+								<li><a href="#" class="navBtn">animation-name</a></li>
+								<li><a href="#" class="navBtn">animation-play-state</a></li>
+								<li><a href="#" class="navBtn las">animation-timing-function</a></li>
+								<li><p class="navLabel">B</p></li>
+								<li><a href="#" class="navBtn">backface-visibility</a></li>
+								<li><a href="#" class="navBtn">background</a></li>
+								<li><a href="#" class="navBtn">background-attachment</a></li>
+								<li><a href="#" class="navBtn">background-blend-mode</a></li>
+								<li><a href="#" class="navBtn">background-clip</a></li>
+								<li><a href="#" class="navBtn">background-color</a></li>
+								<li><a href="#" class="navBtn">background-image</a></li>
+								<li><a href="#" class="navBtn">background-position</a></li>
+								<li><a href="#" class="navBtn">background-repeat</a></li>
+								<li><a href="#" class="navBtn">background-size</a></li>
+								<li><a href="#" class="navBtn">border</a></li>
+								<li><a href="#" class="navBtn">border-bottom</a></li>
+								<li><a href="#" class="navBtn">border-bottom-color</a></li>
+								<li><a href="#" class="navBtn">border-bottom-left-radius</a></li>
+								<li><a href="#" class="navBtn">border-bottom-right-radius</a></li>
+								<li><a href="#" class="navBtn">border-bottom-style</a></li>
+								<li><a href="#" class="navBtn">border-bottom-width</a></li>
+								<li><a href="#" class="navBtn">border-collapse</a></li>
+								<li><a href="#" class="navBtn">border-color</a></li>
+								<li><a href="#" class="navBtn">border-image</a></li>
+								<li><a href="#" class="navBtn">border-image-outset</a></li>
+								<li><a href="#" class="navBtn">border-image-repeat</a></li>
+								<li><a href="#" class="navBtn">border-image-slice</a></li>
+								<li><a href="#" class="navBtn">border-image-source</a></li>
+								<li><a href="#" class="navBtn">border-image-width</a></li>
+								<li><a href="#" class="navBtn">border-left</a></li>
+								<li><a href="#" class="navBtn">border-left-color</a></li>
+								<li><a href="#" class="navBtn">border-left-style</a></li>
+								<li><a href="#" class="navBtn">border-left-width</a></li>
+								<li><a href="#" class="navBtn">border-radius</a></li>
+								<li><a href="#" class="navBtn">border-right</a></li>
+								<li><a href="#" class="navBtn">border-right-color</a></li>
+								<li><a href="#" class="navBtn">border-right-style</a></li>
+								<li><a href="#" class="navBtn">border-right-width</a></li>
+								<li><a href="#" class="navBtn">border-spacing</a></li>
+								<li><a href="#" class="navBtn">border-style</a></li>
+								<li><a href="#" class="navBtn">border-top</a></li>
+								<li><a href="#" class="navBtn">border-top-color</a></li>
+								<li><a href="#" class="navBtn">border-top-left-radius</a></li>
+								<li><a href="#" class="navBtn">border-top-right-radius</a></li>
+								<li><a href="#" class="navBtn">border-top-style</a></li>
+								<li><a href="#" class="navBtn">border-top-width</a></li>
+								<li><a href="#" class="navBtn">border-width</a></li>
+								<li><a href="#" class="navBtn">bottom</a></li>
+								<li><a href="#" class="navBtn">box-decoration-break</a></li>
+								<li><a href="#" class="navBtn">box-shadow</a></li>
+								<li><a href="#" class="navBtn">box-sizing</a></li>
+								<li><a href="#" class="navBtn">break-after</a></li>
+								<li><a href="#" class="navBtn">break-before</a></li>
+								<li><a href="#" class="navBtn las">break-inside</a></li>
+								<li><p class="navLabel">C</p></li>
+								<li><a href="#" class="navBtn">caption-side</a></li>
+								<li><a href="#" class="navBtn">caret-color</a></li>
+								<li><a href="#" class="navBtn">@charset</a></li>
+								<li><a href="#" class="navBtn">clear</a></li>
+								<li><a href="#" class="navBtn">clip</a></li>
+								<li><a href="#" class="navBtn">color</a></li>
+								<li><a href="#" class="navBtn">column-count</a></li>
+								<li><a href="#" class="navBtn">column-fill</a></li>
+								<li><a href="#" class="navBtn">column-gap</a></li>
+								<li><a href="#" class="navBtn">column-rule</a></li>
+								<li><a href="#" class="navBtn">column-rule-color</a></li>
+								<li><a href="#" class="navBtn">column-rule-style</a></li>
+								<li><a href="#" class="navBtn">column-rule-width</a></li>
+								<li><a href="#" class="navBtn">column-span</a></li>
+								<li><a href="#" class="navBtn">column-width</a></li>
+								<li><a href="#" class="navBtn">columns</a></li>
+								<li><a href="#" class="navBtn">content</a></li>
+								<li><a href="#" class="navBtn">counter-increment</a></li>
+								<li><a href="#" class="navBtn">counter-reset</a></li>
+								<li><a href="#" class="navBtn">cursor</a></li>
+								<li><p class="navLabel">D</p></li>
+								<li><a href="#" class="navBtn">direction</a></li>
+								<li><a href="#" class="navBtn">display</a></li>
+								<li><p class="navLabel">E</p></li>
+								<li><a href="#" class="navBtn">empty-cells</a></li>
+								<li><p class="navLabel">F</p></li>
+								<li><a href="#" class="navBtn">filter</a></li>
+								<li><a href="#" class="navBtn">flex</a></li>
+								<li><a href="#" class="navBtn">flex-basis</a></li>
+								<li><a href="#" class="navBtn">flex-direction</a></li>
+								<li><a href="#" class="navBtn">flex-flow</a></li>
+								<li><a href="#" class="navBtn">flex-grow</a></li>
+								<li><a href="#" class="navBtn">flex-shrink</a></li>
+								<li><a href="#" class="navBtn">flex-wrap</a></li>
+								<li><a href="#" class="navBtn">float</a></li>
+								<li><a href="#" class="navBtn">font</a></li>
+								<li><a href="#" class="navBtn">@font-face</a></li>
+								<li><a href="#" class="navBtn">font-family</a></li>
+								<li><a href="#" class="navBtn">font-feature-settings</a></li>
+								<li><a href="#" class="navBtn">@font-feature-values</a></li>
+								<li><a href="#" class="navBtn">font-kerning</a></li>
+								<li><a href="#" class="navBtn">font-language-override</a></li>
+								<li><a href="#" class="navBtn">font-size</a></li>
+								<li><a href="#" class="navBtn">font-size-adjust</a></li>
+								<li><a href="#" class="navBtn">font-stretch</a></li>
+								<li><a href="#" class="navBtn">font-style</a></li>
+								<li><a href="#" class="navBtn">font-synthesis</a></li>
+								<li><a href="#" class="navBtn">font-variant</a></li>
+								<li><a href="#" class="navBtn">font-variant-alternates</a></li>
+								<li><a href="#" class="navBtn">font-variant-caps</a></li>
+								<li><a href="#" class="navBtn">font-variant-east-asian</a></li>
+								<li><a href="#" class="navBtn">font-variant-ligatures</a></li>
+								<li><a href="#" class="navBtn">font-variant-numeric</a></li>
+								<li><a href="#" class="navBtn">font-variant-position</a></li>
+								<li><a href="#" class="navBtn">font-weight</a></li>			
+								<li><p class="navLabel">G</p></li>
+								<li><a href="#" class="navBtn">grid</a></li>
+								<li><a href="#" class="navBtn">grid-area</a></li>
+								<li><a href="#" class="navBtn">grid-auto-columns</a></li>
+								<li><a href="#" class="navBtn">grid-auto-flow</a></li>
+								<li><a href="#" class="navBtn">grid-auto-rows</a></li>
+								<li><a href="#" class="navBtn">grid-column</a></li>
+								<li><a href="#" class="navBtn">grid-column-end</a></li>
+								<li><a href="#" class="navBtn">grid-column-gap</a></li>
+								<li><a href="#" class="navBtn">grid-column-start</a></li>
+								<li><a href="#" class="navBtn">grid-gap</a></li>
+								<li><a href="#" class="navBtn">grid-row</a></li>
+								<li><a href="#" class="navBtn">grid-row-end</a></li>
+								<li><a href="#" class="navBtn">grid-row-gap</a></li>
+								<li><a href="#" class="navBtn">grid-row-start</a></li>
+								<li><a href="#" class="navBtn">grid-template</a></li>
+								<li><a href="#" class="navBtn">grid-template-areas</a></li>
+								<li><a href="#" class="navBtn">grid-template-columns</a></li>
+								<li><a href="#" class="navBtn">grid-template-rows</a></li>
+								<li><p class="navLabel">H</p></li>
+								<li><a href="#" class="navBtn">hanging-punctuation</a></li>
+								<li><a href="#" class="navBtn">height</a></li>
+								<li><a href="#" class="navBtn">hyphens</a></li>
+								<li><p class="navLabel">I</p></li>
+								<li><a href="#" class="navBtn">image-rendering</a></li>
+								<li><a href="#" class="navBtn">@import</a></li>
+								<li><a href="#" class="navBtn">isolation</a></li>
+								<li><p class="navLabel">J</p></li>
+								<li><a href="#" class="navBtn">justify-content</a></li>
+								<li><p class="navLabel">K</p></li>
+								<li><a href="#" class="navBtn">@keyframes</a></li>
+								<li><p class="navLabel">L</p></li>
+								<li><a href="#" class="navBtn">left</a></li>
+								<li><a href="#" class="navBtn">letter-spacing</a></li>
+								<li><a href="#" class="navBtn">line-break</a></li>
+								<li><a href="#" class="navBtn">line-height</a></li>
+								<li><a href="#" class="navBtn">list-style</a></li>
+								<li><a href="#" class="navBtn">list-style-image</a></li>
+								<li><a href="#" class="navBtn">list-style-position</a></li>
+								<li><a href="#" class="navBtn">list-style-type</a></li>
+								<li><p class="navLabel">M</p></li>
+								<li><a href="#" class="navBtn">margin</a></li>
+								<li><a href="#" class="navBtn">margin-bottom</a></li>
+								<li><a href="#" class="navBtn">margin-left</a></li>
+								<li><a href="#" class="navBtn">margin-right</a></li>
+								<li><a href="#" class="navBtn">margin-top</a></li>
+								<li><a href="#" class="navBtn">max-height</a></li>
+								<li><a href="#" class="navBtn">max-width</a></li>
+								<li><a href="#" class="navBtn">@media</a></li>
+								<li><a href="#" class="navBtn">min-height</a></li>
+								<li><a href="#" class="navBtn">min-width</a></li>
+								<li><a href="#" class="navBtn">mix-blend-mode</a></li>
+								<li><p class="navLabel">O</p></li>
+								<li><a href="#" class="navBtn">object-fit</a></li>
+								<li><a href="#" class="navBtn">object-position</a></li>
+								<li><a href="#" class="navBtn">opacity</a></li>
+								<li><a href="#" class="navBtn">order</a></li>
+								<li><a href="#" class="navBtn">orphans</a></li>
+								<li><a href="#" class="navBtn">outline</a></li>
+								<li><a href="#" class="navBtn">outline-color</a></li>
+								<li><a href="#" class="navBtn">outline-offset</a></li>
+								<li><a href="#" class="navBtn">outline-style</a></li>
+								<li><a href="#" class="navBtn">outline-width</a></li>
+								<li><a href="#" class="navBtn">overflow</a></li>
+								<li><a href="#" class="navBtn">overflow-wrap</a></li>
+								<li><a href="#" class="navBtn">overflow-x</a></li>
+								<li><a href="#" class="navBtn">overflow-y</a></li>
+								<li><p class="navLabel">P</p></li>
+								<li><a href="#" class="navBtn">padding</a></li>
+								<li><a href="#" class="navBtn">padding-bottom</a></li>
+								<li><a href="#" class="navBtn">padding-left</a></li>
+								<li><a href="#" class="navBtn">padding-right</a></li>
+								<li><a href="#" class="navBtn">padding-top</a></li>
+								<li><a href="#" class="navBtn">page-break-after</a></li>
+								<li><a href="#" class="navBtn">page-break-before</a></li>
+								<li><a href="#" class="navBtn">page-break-inside</a></li>
+								<li><a href="#" class="navBtn">perspective</a></li>
+								<li><a href="#" class="navBtn">perspective-origin</a></li>
+								<li><a href="#" class="navBtn">pointer-events</a></li>
+								<li><a href="#" class="navBtn">position</a></li>
+								<li><p class="navLabel">Q</p></li>
+								<li><a href="#" class="navBtn">quotes</a></li>
+								<li><p class="navLabel">R</p></li>
+								<li><a href="#" class="navBtn">resize</a></li>
+								<li><a href="#" class="navBtn">right</a></li>
+								<li><p class="navLabel">S</p></li>
+								<li><a href="#" class="navBtn">scroll-behavior</a></li>
+								<li><p class="navLabel">T</p></li>
+								<li><a href="#" class="navBtn">tab-size</a></li>
+								<li><a href="#" class="navBtn">table-layout</a></li>
+								<li><a href="#" class="navBtn">text-align</a></li>
+								<li><a href="#" class="navBtn">text-align-last</a></li>
+								<li><a href="#" class="navBtn">text-combine-upright</a></li>
+								<li><a href="#" class="navBtn">text-decoration</a></li>
+								<li><a href="#" class="navBtn">text-decoration-color</a></li>
+								<li><a href="#" class="navBtn">text-decoration-line</a></li>
+								<li><a href="#" class="navBtn">text-decoration-style</a></li>
+								<li><a href="#" class="navBtn">text-indent</a></li>
+								<li><a href="#" class="navBtn">text-justify</a></li>
+								<li><a href="#" class="navBtn">text-orientation</a></li>
+								<li><a href="#" class="navBtn">text-overflow</a></li>
+								<li><a href="#" class="navBtn">text-shadow</a></li>
+								<li><a href="#" class="navBtn">text-transform</a></li>
+								<li><a href="#" class="navBtn">text-underline-position</a></li>
+								<li><a href="#" class="navBtn">top</a></li>
+								<li><a href="#" class="navBtn">transform</a></li>
+								<li><a href="#" class="navBtn">transform-origin</a></li>
+								<li><a href="#" class="navBtn">transform-style</a></li>
+								<li><a href="#" class="navBtn">transition</a></li>
+								<li><a href="#" class="navBtn">transition-delay</a></li>
+								<li><a href="#" class="navBtn">transition-duration</a></li>
+								<li><a href="#" class="navBtn">transition-property</a></li>
+								<li><a href="#" class="navBtn">transition-timing-function</a></li>
+								<li><p class="navLabel">U</p></li>
+								<li><a href="#" class="navBtn">unicode-bidi</a></li>
+								<li><a href="#" class="navBtn">user-select</a></li>
+								<li><p class="navLabel">V</p></li>
+								<li><a href="#" class="navBtn">vertical-align</a></li>
+								<li><a href="#" class="navBtn">visibility</a></li>
+								<li><p class="navLabel">W</p></li>
+								<li><a href="#" class="navBtn">white-space</a></li>
+								<li><a href="#" class="navBtn">widows</a></li>
+								<li><a href="#" class="navBtn">width</a></li>
+								<li><a href="#" class="navBtn">word-break</a></li>
+								<li><a href="#" class="navBtn">word-spacing</a></li>
+								<li><a href="#" class="navBtn">word-wrap</a></li>
+								<li><a href="#" class="navBtn">writing-mode</a></li>
+								<li><p class="navLabel">Z</p></li>
+								<li><a href="#" class="navBtn">z-index</a></li>
+							</ul>
+							</s_sidebar_element>
+							</s_sidebar>
+						</nav>
+						<div class="left-footer">
+							<div id="renRe"></div>
+						</div>
+					</div><!-- // main-left -->
+					
+					<div class="main-content">
+						<div class="main-content-inner">
+							<s_list>
+					      <div id="list">
+					        <div class="search-title">[##_list_conform_##] ([##_list_count_##])</div>
+					        <s_list_empty>
+					          <p class="emptylm"><span class="search-text text-link font-bold"><span class="text">'</span>[##_list_conform_##]<span class="text">'</span></span>에 대한 검색 결과가 없습니다.</p>
+					          <p class="emptylms">검색어의 단어 수를 줄이거나, 보다 일반적인 검색어로 다시 검색해 보세요.<br>
+					          키워드에 있는 특수문자를 뺀 후에 검색해 보세요.</p>
+					        </s_list_empty>
+					      </div> 
+					    </s_list>
+
+							<s_article_rep>
+
+							<s_index_article_rep>
+					      <div class="post">        
+					        <p class="title"><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></p>
+					        <p class="summary">[##_article_rep_summary_##]</p><time class="date">→<span>[##_article_rep_date_##]</span></time>
+					        <div class="category"><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></div>
+					    	</div>
+							</s_index_article_rep>
+
+							<s_permalink_article_rep>
+					      <article id="post">
+					      	<div class="pageheaderinner">
+						      	<a class="category" href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a>
+						        <p class="title">[##_article_rep_title_##]</p>
+						        <div id="meta"><span class="date">[##_article_rep_date_##]</span>
+						          <s_ad_div><span class="update"><a href="[##_s_ad_m_link_##]">수정</a></span><span class="state"><a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s1_label_##]</a></span><span class="delete"><a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a></span></s_ad_div>
+						        </div>
+					      	</div>
+
+					        <div class="content">[##_article_rep_desc_##]</div>
+
+					        <s_tag_label>
+					          <div id="tags"><span class="tag">[##_tag_label_rep_##]</span></div>
+					        </s_tag_label>
+
+					        <!-- 본문하단 카테고리글 더보기 { -->
+					        <s_article_related>
+					          <div class="related-articles">
+					            <div class="h2title"><small>관련된 다른 글</small><p><strong>[##_article_rep_category_##]</strong></p></div>
+					            <ul>
+					              <s_article_related_rep>
+					                <li class="thumb_type">
+					                  <a href="[##_article_related_rep_link_##]">
+					                    <s_article_related_rep_thumbnail>
+					                      <div class="thumbnail"></div>
+					                    </s_article_related_rep_thumbnail>
+					                    <div class="data">
+					                      <div class="title">[##_article_related_rep_title_##]</div>
+					                      <div class="date">[##_article_related_rep_date_##]</div>
+					                    </div>
+					                  </a>
+					                </li>
+					              </s_article_related_rep>
+					            </ul>
+					          </div>
+					        </s_article_related>
+					        <!-- } 본문하단 카테고리글 더보기 -->
+
+					        <!-- 댓글 { -->
+					        <s_rp>
+					          <div class="comments">
+					            <s_rp_container>
+					              <div class="comment-list">
+					                <ul>
+					                  <s_rp_rep>
+					                    <li id="[##_rp_rep_id_##]">
+					                      <div class="author-meta">                            
+					                        <span class="nickname">[##_rp_rep_name_##]</span>
+					                        <span class="date">[##_rp_rep_date_##]</span>
+					                        <span class="control">
+					                          <a href="[##_rp_rep_link_##]">댓글주소</a>
+					                          <a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a>
+					                          <a href="#" onclick="[##_rp_rep_onclick_reply_##]">댓글쓰기</a>
+					                        </span>
+					                      </div>
+					                      <p>[##_rp_rep_desc_##]</p>
+					                      <s_rp2_container>
+					                        <ul>
+					                          <s_rp2_rep>
+					                            <li id="[##_rp_rep_id_##]">
+					                              <div class="author-meta">                                    
+					                                <span class="nickname">[##_rp_rep_name_##]</span>
+					                                <span class="date">[##_rp_rep_date_##]</span>
+					                                <span class="control">
+					                                  <a href="[##_rp_rep_link_##]">댓글주소</a>
+					                                  <a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a>
+					                                </span>
+					                              </div>
+					                              <p>[##_rp_rep_desc_##]</p>
+					                            </li>
+					                          </s_rp2_rep>
+					                        </ul>
+					                      </s_rp2_container>
+					                    </li>
+					                  </s_rp_rep>
+					                </ul>
+					              </div>
+					            </s_rp_container>
+
+					            <s_rp_input_form>
+					              <div class="comment-form">
+					                <s_rp_member>
+					                  <div class="field">
+					                    <s_rp_guest>
+					                      <input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" placeholder="이름">
+					                      <input type="password" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" placeholder="암호">
+					                    </s_rp_guest>
+					                    <div class="secret">
+					                      <input type="checkbox" name="[##_rp_input_is_secret_##]" id="secret">
+					                      <label for="secret" tabindex="0">Secret</label>
+					                    </div>
+					                  </div>
+					                </s_rp_member>
+					                <textarea name="[##_rp_input_comment_##]" cols="" rows="4" placeholder="여러분의 소중한 댓글을 입력해주세요."></textarea>
+					                <div class="submit">
+					                  <button type="submit" class="btn" onclick="[##_rp_onclick_submit_##]">댓글달기</button>
+					                </div>
+					              </div>
+					            </s_rp_input_form>
+					          </div>
+					        </s_rp>
+					        <!-- } 댓글 -->
+
+					      <div id="pagination-wrap"><!-- 페이지 { -->
+					        <s_paging>
+					          <div class="pagination clearfix">
+					            <a [##_prev_page_##] class="prev [##_no_more_prev_##] t-none" title="이전글"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+					            <s_paging_rep>
+					              <a [##_paging_rep_link_##]>[##_paging_rep_link_num_##]</a>
+					            </s_paging_rep>
+					            <a [##_next_page_##] class="next [##_no_more_next_##] t-none" title="다음글"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+					          </div>
+					        </s_paging>
+					      </div><!-- } 페이지 -->
+
+					      </article>
+					      </s_permalink_article_rep>
+							</s_article_rep>
+						</div><!-- // main-content-inner -->
+					</div><!-- // main-content -->
+					<div class="main-right">
+						<div class="main-right-inner">
+							<p>IN THIS PAGE</p>
+							<div id="scrollspy"></div>
+						</div>
+					</div><!-- // main-right -->
+				</div><!-- // main-inner -->
+			</main>
 			<footer id="footer">
 				<div class="quick_link">
 					<a href="">공지사항</a>
-					<span class="bar">
+					<span class="bar">|</span>
 					<a href="">글쓰기</a>
 				</div>				
 			</footer>
 		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="./images/script.js?b=13"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script><!-- highlight.js -->
+	<script src="./images/jquery.sieve.min.js?v=0.3.0"></script><!-- page in search JavaScript -->
+	<script src="./images/bootstrap.ak.min.js?v=4.4.1.ad"></script><!-- Toc용 bootstrap JavaScript  -->
+	<script src="./images/dynamicscrollspy.ak.min.js?b=1"></script><!-- Toc용 JavaScript  -->
+	<script src="./images/script.js?b=16"></script>
 	</s_t3>
 </body>
 </html>
