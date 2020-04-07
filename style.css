@@ -36,6 +36,7 @@ body {
   -webkit-box-direction: normal;
   height: 100%;
   min-height: 100%;
+  line-height: 1.5;
 }
 
 *, *:before, *:after {
@@ -76,7 +77,7 @@ cite{color: #6c757d;}
 :not(pre) > kbd, 
 :not(pre) > samp {
     font-size: 87.5%;
-    color: #DE3E95;
+    color: #FE2477;
     word-wrap: break-word;
 }
 pre code {font-size: inherit;color: inherit;word-break: normal;}
@@ -100,16 +101,12 @@ h2, h3, .h2, .h3 {
 h2:first-child,h3:first-child,.h2:first-child,.h3:first-child {
   margin-top: 0;
 }
-.par {
+h2.title, h3.title {
   font-size: 42px;
   font-weight: 300!important;
+  margin-bottom: 1rem;
 }
-.par::before {
-  content:'# ';
-  font-size: 36px;
-  color:var(--muted-color);
-  font-weight: 100;
-}
+
 
 .mt-60,.mt-15,.mt-375{margin-top:3.75rem!important}
 .mb-60,.mb-15,.mb-375{margin-bottom:3.75rem!important}
@@ -639,7 +636,7 @@ transition: background-color 5000s ease-in-out 0s;
   position: relative;
   font-size: 13px;
 }
-.main-right-inner::before {
+/* .main-right-inner::before {
   top: 110px;
   left: 0;
   height: 100%;
@@ -647,14 +644,15 @@ transition: background-color 5000s ease-in-out 0s;
   position: absolute;
   transform: translateY(-50%);
   border-left: 1px solid #E6ECF1;
-}
+}*/
 .main-right-inner.on {
   top: 32px;
   position: fixed;
 }
 .main-right-inner p {
-  padding-left: 24px;
-  color: #9DAAB6; 
+  padding-left: 12px;
+  color: #9DAAB6;
+  border-left: 2px solid #9DAAB6;
 }
 #scrollspy {
   flex: 1;
@@ -803,13 +801,13 @@ transition: background-color 5000s ease-in-out 0s;
 .comments .comment-form .field .secret input[type=checkbox]:checked+label::before{content:'\e721';font-family:"iconfont";font-weight:700;color:#222831}
 .comments .comment-form .submit{text-align: right;}
 .comments .comment-form .submit .btn{padding
-  : 10px 30px;display: inline-block;color: var(--content-bg-color);text-align:center;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:var(--link-hover-color);font-size:1rem;line-height:1.25;text-decoration:none;min-width: 200px;border: none;}
-.comments .comment-form .submit .btn:hover{background-color:var(--link-color);}
+  : 10px 30px;display: inline-block;color: var(--content-bg-color);text-align:center;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:var(--text-color);font-size:1rem;line-height:1.25;text-decoration:none;min-width: 200px;border: none;}
+.comments .comment-form .submit .btn:hover{background-color:var(--e-text-color);}
 
 /* 카테고리 더보기 */
 .related-articles{overflow:hidden;width:100%;margin:70px 0 50px;padding:0 5px 30px;border-bottom:1px solid var(--a-line-color)}
 .related-articles .h2title{margin-bottom:28px;font-size:20px}
-.related-articles .h2title p{margin-top:-6px;font-family: 'Baloo Thambi 2', cursive;font-size: 26px;letter-spacing: -.5px;}
+.related-articles .h2title p{margin-top:-10px;font-family: 'Baloo Thambi 2', cursive;font-size: 26px;letter-spacing: -.5px;}
 .related-articles .h2title small{font-size:13px}
 .related-articles hr{margin-top:-20px;margin-bottom:10px}
 .related-articles ul{margin:0 -15px;padding:0}
@@ -878,6 +876,14 @@ transition: background-color 5000s ease-in-out 0s;
 
 /* -------------------------------------------------------------------------------*/
 
+.container_postbtn {
+  padding-top: 85px !important;
+}
+.container_postbtn .postbtn_like {
+  border-left-width: 5px !important;
+  border-radius: 4px !important;
+}
+
 .main-content .dep {
   color:#F92E2F;
 }
@@ -886,7 +892,9 @@ transition: background-color 5000s ease-in-out 0s;
 }
 .main-content .html5badge::after {
   content:'\e79a';
-  font-family:"iconfont";  
+  font-family:"iconfont";
+  margin-left: 10px;
+  color:#ea6228;
 }
 .txc-textbox {
 position:relative;
@@ -994,6 +1002,10 @@ box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
 .exbody > pre::before {
   display: none;
 }
+.exbody > p {
+  padding: 8px 16px !important;
+  margin: 0
+}
 .exbody > pre~p,
 .exbody > ul~p,
 .exbody > table~p {  
@@ -1016,6 +1028,21 @@ box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
 .exbody > table~p a:hover {
   color: var(--e-text-color)
 }
+.exbody pre.-setup,
+.exbody p.-setup,
+.exbody ul.-setup {
+  background-color: #f1f1f1
+}
+.exbody > p.-setup + p,
+.exbody > p.-setup + ul,
+.exbody > p.-setup + table {
+  margin-top:0
+}
+.exbody > p + p,
+.exbody > p + p:not(:first-child) {
+  margin-top: -1.5em;
+  border-top: 0
+}
 .exbody > h5 {
   font-size: 14px;
   margin: 0;
@@ -1024,7 +1051,11 @@ box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
   background-color: #e8e9ea;
   color: #678;
 }
-
+.exbody h5 code {
+  background-color: #e8e9ea!important;
+  color: var(--e-text-color)!important;
+  font-weight:700!important;
+}
 
 .table {
   border-collapse: collapse;
