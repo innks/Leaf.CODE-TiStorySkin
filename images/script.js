@@ -34,6 +34,11 @@ $(document).ready(function() {
 		} else {
 			$('#left-nav, .main-right-inner').removeClass('on');
 		}
+	});
+
+	// --- 모바일 네비 - 상위버튼
+	$('.mobileButton').click(function(){
+		$('.main-left').toggleClass('show');
 	});	
 
 });
