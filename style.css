@@ -102,12 +102,15 @@ h2:first-child,h3:first-child,.h2:first-child,.h3:first-child {
   margin-top: 0;
 }
 h2.title, h3.title {
-  font-size: 42px;
+  font-size: 28px;
   font-weight: 300!important;
   margin-bottom: 1rem;
 }
-
-
+@media (min-width:1024px) {
+  h2.title, h3.title {
+    font-size: 42px;
+  }
+}
 .mt-60,.mt-15,.mt-375{margin-top:3.75rem!important}
 .mb-60,.mb-15,.mb-375{margin-bottom:3.75rem!important}
 .mt-0{margin-top:0!important}
@@ -419,6 +422,15 @@ transition: background-color 5000s ease-in-out 0s;
   flex: 1;
   width: 100%;
 }
+#dimmed {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index: 28;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
 .main-inner {
   display: flex;
   flex-direction: row;  
@@ -438,7 +450,7 @@ transition: background-color 5000s ease-in-out 0s;
   margin-left: 0;
   transform: translateX(0) !important;  
   box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px;
-  z-index: 120;
+  z-index: 30;
 }
 @media screen and (max-width: 1023.98px) {
   .main-inner {
@@ -623,7 +635,6 @@ transition: background-color 5000s ease-in-out 0s;
   padding: 0;
   min-width: 0;
   padding-bottom: 64px;
-  z-index: 118;
 }
 .main-content-inner {
   margin: 32px 0 40px;
@@ -725,12 +736,12 @@ transition: background-color 5000s ease-in-out 0s;
   border-top: 1px solid rgba(0,0,0,.1);
   padding: 25px 0;
 }
-.post:first-of-type {
+.post:first-child {
   padding-top: 0;
   border: none;
   padding-bottom: 25px
 }
-.post:last-of-type {
+.post:last-child {
   padding-bottom: 0
 }
 .post .title {
@@ -745,7 +756,7 @@ transition: background-color 5000s ease-in-out 0s;
   margin-bottom: 8px;
   display: inline-block;
 }
-.post .category a {font-weight: 700;font-size: 1.1rem;letter-spacing: -.5px;font-family: 'Baloo Thambi 2', cursive;margin-left: 0;}
+.post .category a {font-weight: 700;font-size: 1.1rem;letter-spacing: -.5px;font-family: 'Baloo Thambi 2', 'AritaDotum','Malgun Gothic',sans-serif;margin-left: 0;}
 
 .post .summary {
   display: -webkit-box;
@@ -773,7 +784,7 @@ transition: background-color 5000s ease-in-out 0s;
 
 #post {padding: 10px 0}
 .pageheaderinner {margin: 0;display: block;padding: 0;padding-bottom: 16px;border-bottom: 1px solid #E6ECF1;margin-bottom: 32px;}
-#post .category {font-weight: 700;font-size: 1.4rem;letter-spacing: -.5px;font-family: 'Baloo Thambi 2', cursive;}
+#post .category {font-weight: 700;font-size: 1.4rem;letter-spacing: -.5px;font-family: 'Baloo Thambi 2', 'AritaDotum','Malgun Gothic',sans-serif;}
 #post .category:hover {}
 #post .pageheaderinner .title {margin: 10px 0;line-height: 1.5em;font-weight: 700;font-size: 1.8rem}
 #post .content {text-align: left;margin-top: 50px}
@@ -905,7 +916,6 @@ transition: background-color 5000s ease-in-out 0s;
   border-left-width: 5px !important;
   border-radius: 4px !important;
 }
-
 .main-content .dep {
   color:#F92E2F;
 }
@@ -1021,6 +1031,31 @@ box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
   font-size: .96em;
   line-height: 1.5;
 }
+.exbody > pre > code::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+.exbody > pre > code::-webkit-scrollbar-track {
+  background: none;
+  border-width: 0;
+}
+.exbody > pre > code::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,.16);
+  border-radius: 2px;
+  background: rgba(255,255,255,.16);
+}
+.exbody > pre > code::-webkit-scrollbar-button {
+  display: none;
+}
+.exbody > pre > code::-webkit-scrollbar-track-piece {
+  display: none;
+}
+.exbody > pre > code::-webkit-scrollbar-corner {
+  display: none;
+}
+.exbody > pre > code::-webkit-resizer {
+  display: none;
+}
 .exbody > pre::before {
   display: none;
 }
@@ -1128,6 +1163,11 @@ box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
   vertical-align: middle;
 }
 .table.bsu th img {
-  width: 30px;
+  width: 3vw;
   max-width: none;
+}
+@media (min-width:1024px) {
+  .table.bsu th img {
+    width: 30px;
+  }
 }

@@ -37,9 +37,17 @@ $(document).ready(function() {
 	});
 
 	// --- 모바일 네비 - 상위버튼
-	$('.mobileButton').click(function(){
-		$('.main-left').toggleClass('show');
-	});	
+	$("#__header__").on("click", ".mobileButton", function(){
+			if ( $('.main-left').hasClass('show') ){
+				$('.main-left').removeClass('show');
+				$('#dimmed').remove();
+			} else {
+				$('.main-left').addClass('show');
+				$('body').append('<div id="dimmed" />').on('click', '#dimmed', function(){
+					$('.mobileButton').click();
+				});
+			}
+		});
 
 });
 
