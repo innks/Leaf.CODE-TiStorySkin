@@ -1085,6 +1085,12 @@ box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
 .exbody > table~p a:hover {
   color: var(--e-text-color)
 }
+.exbody p a.tx-link {
+  background-color: var(--link-color);
+  color:var(--content-bg-color) !important;
+  padding: 4px 10px 2px;
+}
+
 .exbody pre.-setup,
 .exbody p.-setup,
 .exbody ul.-setup {
